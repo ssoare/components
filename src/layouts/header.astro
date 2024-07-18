@@ -1,0 +1,40 @@
+---
+import LightDarkMode from '../components/lightdarkmode.jsx';
+
+const navLinks = [
+    {
+        title: 'Home',
+        url: '/',
+    },{
+        title: 'Buttons',
+        url: '/buttons',
+    },{
+        title: 'Cards',
+        url: '/cards',
+    },{
+        title: 'Carousels',
+        url: '/carousels',
+    },{
+        title: 'Forms',
+        url: '/forms',
+    }
+]
+---
+
+<header class="fixed h-svh w-[350px] bg-white border-r-2 shadow-lg top-0 left-0 flex flex-col p-4 gap-4 text-black shadow-white">
+    <LightDarkMode client:load/>
+    <h1 class="text-3xl font-semibold underline text-center my-4">Components</h1>
+        {navLinks.map((item) => {
+            return(
+                <a 
+                    class={`
+                       text-xl py-2 transition-all px-4
+                       hover:bg-blue-500 hover:text-white hover:px-6
+                       ${Astro.url.pathname === item.url ? 'bg-blue-500 text-white' : ''}
+                        `}
+                    href={item.url}>
+                    {item.title}
+                </a>
+            )
+        })}
+</header>

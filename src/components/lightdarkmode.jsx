@@ -14,8 +14,9 @@ export default function LightDarkMode() {
                 absolute size-6 rounded-full transition-all
                 ${isDarkMode ? 'translate-x-8 bg-black' : 'translate-x-1 bg-white'}
                 `}></span>
-            <img className="fill-red-500 stroke-red-500 text-red-500 mx-1" src="/src/assets/lightmode.svg" alt="" />
-            <img src="/src/assets/darkmode.svg" alt="" />
+            <img className="fill-red-500 stroke-red-500 text-red-500 mx-1" 
+                src="../public/assets/lightmode.svg" alt="" />
+            <img src="../public/assets/darkmode.svg" alt="" />
         </button>
     )
 }
